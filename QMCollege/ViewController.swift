@@ -13,6 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+
+        
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        SVProgressHUD.showWithStatus("jiazai", maskType: SVProgressHUDMaskType.Black)
+
+        Service().citylist { (array, error) -> Void! in
+            
+            SVProgressHUD.dismiss()
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
