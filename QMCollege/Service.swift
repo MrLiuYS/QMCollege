@@ -21,16 +21,29 @@ class Service:AFHTTPSessionManager
         dispatch_once(&singleton.predicate,
             {
                 singleton.instance=Service(baseURL: NSURL(string: kBaseURLString))
+                singleton.instance?.responseSerializer = AFHTTPResponseSerializer()
             }
         )
         return singleton.instance!
+        //    }
+        
+        
     }
     
     func citylist(block:((array:NSArray!, error:NSError!)->Void!) ){
         
-        Service.shareInstance().GET("index.asp", parameters: nil, success: { (task:NSURLSessionDataTask!, responseObject:AnyObject!) -> Void in
+        Service.shareInstance().GET("", parameters: nil, success: { (task:NSURLSessionDataTask!, responseObject:AnyObject!) -> Void in
+            
+            println(responseObject)
+            
+//            var doc:GDataXMLDocument = GDataXMLDocument(data: responseObject
+//                , encoding: CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingInvalidId), error: nil)
 
-            block(array: [], error: nil)
+            
+            var doc:GDataXMLDocument = GDataXMLDocument(HTMLData: responseObject, encoding: CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000), error: nil)
+            
+            
+                block(array: [], error: nil)
             
             }) { (task:NSURLSessionDataTask!, error:NSError!) -> Void in
                 
@@ -39,27 +52,8 @@ class Service:AFHTTPSessionManager
         }
     }
     
+
         
-        
-//    func  DefaultTextAndAuthor（ block: { [weak self](array:NSMutableArray!,error:NSError) -> _ in
-//    return
-//    }）
-    
-    
-//    + (NSURLSessionDataTask *) DefaultTextAndAuthor:(void (^)(NSMutableArray *array, NSError *error))block{
-//    
-//    return [[Service sharedClient] GET:@"index.asp"
-//    parameters:nil
-//    success:^(NSURLSessionDataTask *task, id responseObject) {
-//    
-//    block([self parseFromDefault:responseObject], nil);
-//    
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//    //                                   block(nil, error);
-//    [SVProgressHUD showErrorWithStatus:@"数据错误,请稍后再试"];
-//    }];
-//    }
-    
 }
 
 

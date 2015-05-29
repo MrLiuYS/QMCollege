@@ -10,4 +10,4 @@
 #import <AFNetworking.h>
 
 
-#define kBaseURLString @"http://shufa.m.supfree.net/"
+#define kBaseURLString @"http://college.m.supfree.net/"
