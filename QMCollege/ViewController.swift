@@ -22,13 +22,19 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         
-        SVProgressHUD.showWithStatus("jiazai", maskType: SVProgressHUDMaskType.Black)
-
-        Service().citylist { (array, error) -> Void! in
+        SVProgressHUD.showWithStatus("正在加载", maskType: SVProgressHUDMaskType.Black)
+        
+//        Service.cityList { (array, error) -> Void in
+//
+//            SVProgressHUD.dismiss()
+//        }
+        
+        
+        Service.collegeListFromCity("nba.asp?id=2", withBlock: { (array, error) -> Void in
             
             SVProgressHUD.dismiss()
             
-        }
+        })
         
     }
 

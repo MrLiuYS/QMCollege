@@ -9,5 +9,7 @@
 
 #import <AFNetworking.h>
 
+#import "Service.h"
+
 
 #define kBaseURLString @"http://college.m.supfree.net/"

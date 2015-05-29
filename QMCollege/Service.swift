@@ -40,8 +40,12 @@ class Service:AFHTTPSessionManager
 //                , encoding: CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingInvalidId), error: nil)
 
             
-            var doc:GDataXMLDocument = GDataXMLDocument(HTMLData: responseObject, encoding: CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000), error: nil)
             
+            
+            
+//            var doc = GDataXMLDocument(HTMLData: responseObject, encoding: NSUTF8StringEncoding, error: nil)
+            
+//            println(doc)
             
                 block(array: [], error: nil)
             
