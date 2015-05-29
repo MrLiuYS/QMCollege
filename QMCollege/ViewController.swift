@@ -30,10 +30,15 @@ class ViewController: UIViewController {
 //        }
         
         
-        Service.collegeListFromCity("nba.asp?id=2", withBlock: { (array, error) -> Void in
+//        Service.collegeListFromCity("nba.asp?id=2", withBlock: { (array, error) -> Void in
+//            
+//            SVProgressHUD.dismiss()
+//            
+//        })
+        
+        Service.infoCollege("wba.asp?id=1233", withBlock: { (model, error) -> Void in
             
             SVProgressHUD.dismiss()
-            
         })
         
     }

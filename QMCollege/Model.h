@@ -10,10 +10,11 @@
 
 @interface Model : NSObject
 
-@property (nonatomic, copy) NSString * city;
+@property (nonatomic, copy) NSString * title;
+
 @property (nonatomic, copy) NSString * infoUrlString;
 
-- (instancetype)initWithCity:(NSString *)aCity
+- (instancetype)initWithTitle:(NSString *)aTitle
                infoUrlString:(NSString *)aInfoUrlString;
 
 

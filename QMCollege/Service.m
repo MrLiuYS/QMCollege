@@ -8,6 +8,7 @@
 
 #import "Service.h"
 
+
 @implementation Service
 
 + (instancetype)sharedClient {
@@ -67,12 +68,12 @@
     return [[Service sharedClient] GET:@""
                             parameters:nil
                                success:^(NSURLSessionDataTask *task, id responseObject) {
-                                   block([self parseCityListFromData:responseObject],nil);
+                                   block([self parseCityList:responseObject],nil);
                                } failure:^(NSURLSessionDataTask *task, NSError *error) {
                                    [SVProgressHUD showErrorWithStatus:@"数据错误,请稍后再试"];
                                }];
 }
-+ (NSArray *)parseCityListFromData:(id)response {
++ (NSArray *)parseCityList:(id)response {
     
     NSMutableArray * mainArray = [NSMutableArray array];
     @autoreleasepool {
@@ -94,7 +95,7 @@
                     
                     for (GDataXMLElement * item in agroups) {
                         
-                        Model * m = [[Model alloc]initWithCity:item.stringValue
+                        Model * m = [[Model alloc]initWithTitle:item.stringValue
                                                  infoUrlString:[[element attributeForName:@"href"] stringValue]];
                         
                         [mainArray addObject:m];
@@ -116,12 +117,12 @@
     return [[Service sharedClient] GET:aCity
                             parameters:nil
                                success:^(NSURLSessionDataTask *task, id responseObject) {
-                                   block([self parseCollegeListFromCity:responseObject],nil);
+                                   block([self parseCollegeList:responseObject],nil);
                                } failure:^(NSURLSessionDataTask *task, NSError *error) {
                                    [SVProgressHUD showErrorWithStatus:@"数据错误,请稍后再试"];
                                }];
 }
-+ (NSArray *)parseCollegeListFromCity:(id)response {
++ (NSArray *)parseCollegeList:(id)response {
     
     NSMutableArray * mainArray = [NSMutableArray array];
     
@@ -132,17 +133,94 @@
                                                                      error:NULL];
         if (doc) {
             NSArray *list = [doc nodesForXPath:@"//ul[@id='daxue']" error:NULL];
+            
+            for (GDataXMLElement * item in list) {
+                
+                NSArray * liItem = [item elementsForName:@"li"];
+                
+                for (GDataXMLElement * item2 in liItem) {
+                    
+                    NSArray * aitem = [item2 elementsForName:@"a"];
+                    
+                    for (GDataXMLElement * element in aitem) {
+                        
+                        Model * m = [[Model alloc]initWithTitle:element.stringValue
+                                                  infoUrlString:[[element attributeForName:@"href"] stringValue]];
+                        [mainArray addObject:m];
 
-            NSLog(@"%@",list);
+                    }
+                    
+                }
+                
+            }
             
         }
-        
-        
-        
     }
     
     return mainArray;
 }
+
+
+
+#pragma mark - 获取学校的详细信息
++ (NSURLSessionDataTask *) infoCollege:(NSString *)aCollege withBlock:(void (^)(id model, NSError *error))block
+{
+    return [[Service sharedClient] GET:aCollege
+                            parameters:nil
+                               success:^(NSURLSessionDataTask *task, id responseObject) {
+                                   block([self pareseCollege:responseObject],nil);
+                               } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                   [SVProgressHUD showErrorWithStatus:@"数据错误,请稍后再试"];
+                               }];
+}
+
++ (CollegeModel *)pareseCollege:(id)response {
+    
+    CollegeModel * m = [CollegeModel new];
+    
+    @autoreleasepool {
+     
+        GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithHTMLData:response
+                                                                  encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+                                                                     error:NULL];
+        
+        if (doc) {
+            NSArray *list = [doc nodesForXPath:@"//table" error:NULL];
+
+            for (GDataXMLElement * item in list) {
+                
+//                NSLog(@"%@",item.stringValue);
+                NSArray * trList = [item elementsForName:@"tr"];
+                
+                for (GDataXMLElement * item in trList) {
+//                    NSLog(@"%@",[item elementsForName:@"td"]);
+                    NSArray * tdList = [item elementsForName:@"td"];
+                    for (GDataXMLElement * tdItem in tdList) {
+                        
+                        NSArray * imgList = [tdItem elementsForName:@"img"];
+                        if (imgList) {
+                            GDataXMLElement * imgElement = imgList[0];
+                            m.logo = [[imgElement attributeForName:@"src"] stringValue];
+                            continue;
+                        }
+                        
+                        NSLog(@"%@",tdItem.stringValue);
+                        
+                        
+                    }
+                    
+                    break;
+                }
+                
+            }
+
+        }
+    
+    }
+    return m;
+}
+
+
 
 
 @end

@@ -11,12 +11,13 @@
 @implementation Model
 
 
-- (instancetype)initWithCity:(NSString *)aCity infoUrlString:(NSString *)aInfoUrlString
+- (instancetype)initWithTitle:(NSString *)aTitle
+                infoUrlString:(NSString *)aInfoUrlString;
 {
     self = [super init];
     if (self) {
         
-        _city = aCity;
+        _title = aTitle;
         _infoUrlString = aInfoUrlString;
         
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5608DC0A4FCE42B3A13F48E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D5EA93A325EE160EA6E2A0 /* libPods.a */; };
+		6C6877911B191B2F002481C0 /* CollegeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6877901B191B2F002481C0 /* CollegeModel.m */; };
 		FF6CC0261B1831CA00A24C81 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6CC0251B1831CA00A24C81 /* Service.m */; };
 		FF6CC02B1B18387F00A24C81 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6CC02A1B18387F00A24C81 /* Model.m */; };
 		FFD900531B15A56000EE7B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD900521B15A56000EE7B59 /* AppDelegate.swift */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		2D1FA29F07159FDF667E514A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3DEF2EE13DD08C879FCB8CE5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6C68778F1B191B2F002481C0 /* CollegeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeModel.h; sourceTree = "<group>"; };
+		6C6877901B191B2F002481C0 /* CollegeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollegeModel.m; sourceTree = "<group>"; };
 		F8D5EA93A325EE160EA6E2A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6CC0241B1831CA00A24C81 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		FF6CC0251B1831CA00A24C81 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 			children = (
 				FF6CC0291B18387F00A24C81 /* Model.h */,
 				FF6CC02A1B18387F00A24C81 /* Model.m */,
+				6C68778F1B191B2F002481C0 /* CollegeModel.h */,
+				6C6877901B191B2F002481C0 /* CollegeModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6877911B191B2F002481C0 /* CollegeModel.m in Sources */,
 				FFD900551B15A56000EE7B59 /* ViewController.swift in Sources */,
 				FFD900531B15A56000EE7B59 /* AppDelegate.swift in Sources */,
 				FF6CC0261B1831CA00A24C81 /* Service.m in Sources */,
