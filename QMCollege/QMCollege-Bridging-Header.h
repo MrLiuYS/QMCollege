@@ -10,6 +10,6 @@
 #import <AFNetworking.h>
 
 #import "Service.h"
-
+#import <UIImageView+WebCache.h>
 
 #define kBaseURLString @"http://college.m.supfree.net/"

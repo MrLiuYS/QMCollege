@@ -7,8 +7,15 @@
 //
 
 #import "CollegeModel.h"
-
+#import "QMCollege-Bridging-Header.h"
 @implementation CollegeModel
+
+
+- (void)setLogo:(NSString *)logo {
+    
+    _logo = [NSString stringWithFormat:@"%@%@",kBaseURLString,logo];
+    
+}
 
 
 - (void)setIntro:(NSString *)intro {

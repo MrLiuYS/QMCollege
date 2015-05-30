@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
 
             self.introLabel.text = collegeModel.intro;
             
-            
+            self.logoImageView.sd_setImageWithURL(NSURL(string: collegeModel.logo), placeholderImage: nil)
             
             SVProgressHUD.dismiss()
         })
