@@ -148,14 +148,10 @@
                                                   infoUrlString:[[element attributeForName:@"href"] stringValue]];
                         [mainArray addObject:m];
 
-                    }
-                    
+                    }   
                 }
-                
             }
-            
         }
-
     }
     
     return mainArray;
@@ -229,21 +225,15 @@
                                 m.intro = el.stringValue;
                             }else {
                                 
-                                
                                 for (GDataXMLElement *el in p) {
                                     m.info = [m.info stringByAppendingFormat:@"%@\n",el.stringValue];
                                 }
                             }
-                            
                         }
                     }
-                    
                 }
-                
             }
-
         }
-    
     }
     return m;
 }
