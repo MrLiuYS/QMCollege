@@ -11,6 +11,20 @@
 @implementation CollegeModel
 
 
+- (void)setIntro:(NSString *)intro {
+    
+    _intro = intro;
+    
+    NSArray * array = [intro componentsSeparatedByString:@"\n"];
+
+    NSLog(@"%@",array);
+    
+    
+    
+    
+}
+
+
 - (void)setInfo211And985:(NSString *)info211And985 {
     
     _info211And985 = info211And985;

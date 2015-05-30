@@ -96,7 +96,7 @@
                     for (GDataXMLElement * item in agroups) {
                         
                         Model * m = [[Model alloc]initWithTitle:item.stringValue
-                                                 infoUrlString:[[element attributeForName:@"href"] stringValue]];
+                                                 infoUrlString:[[item attributeForName:@"href"] stringValue]];
                         
                         [mainArray addObject:m];
                         
@@ -155,6 +155,7 @@
             }
             
         }
+
     }
     
     return mainArray;
@@ -163,7 +164,7 @@
 
 
 #pragma mark - 获取学校的详细信息
-+ (NSURLSessionDataTask *) infoCollege:(NSString *)aCollege withBlock:(void (^)(id model, NSError *error))block
++ (NSURLSessionDataTask *) infoCollege:(NSString *)aCollege withBlock:(void (^)(CollegeModel * collegeModel, NSError *error))block
 {
     return [[Service sharedClient] GET:aCollege
                             parameters:nil
@@ -189,14 +190,17 @@
 
             for (GDataXMLElement * item in list) {
                 
-//                NSLog(@"%@",item.stringValue);
                 NSArray * trList = [item elementsForName:@"tr"];
                 
-                for (GDataXMLElement * item in trList) {
-//                    NSLog(@"%@",[item elementsForName:@"td"]);
+                for (int i=0;i<trList.count;i++)
+                {
+                    
+                    GDataXMLElement * item = trList[i];
+                    
                     NSArray * tdList = [item elementsForName:@"td"];
-                    for (GDataXMLElement * tdItem in tdList) {
-                        
+                    for (GDataXMLElement * tdItem in tdList)
+                    {
+                        //获取图片logo
                         NSArray * imgList = [tdItem elementsForName:@"img"];
                         if (imgList) {
                             GDataXMLElement * imgElement = imgList[0];
@@ -204,12 +208,36 @@
                             continue;
                         }
                         
-                        NSLog(@"%@",tdItem.stringValue);
-                        
-                        
+                        //获取学校名称
+                        NSArray * names = [tdItem elementsForName:@"b"];
+                        if (names)
+                        {
+                            GDataXMLElement * el = names[0];
+                            NSArray * name = [el elementsForName:@"h1"];
+                            if (name)
+                            {
+                                GDataXMLElement * el1 = name[0];
+                                m.name = el1.stringValue;
+                            }
+                        }
+                        //简介
+                        NSArray * p = [tdItem elementsForName:@"p"];
+                        if (p) {
+                            
+                            if (i == 0) {
+                                GDataXMLElement * el = p[0];
+                                m.intro = el.stringValue;
+                            }else {
+                                
+                                
+                                for (GDataXMLElement *el in p) {
+                                    m.info = [m.info stringByAppendingFormat:@"%@\n",el.stringValue];
+                                }
+                            }
+                            
+                        }
                     }
                     
-                    break;
                 }
                 
             }

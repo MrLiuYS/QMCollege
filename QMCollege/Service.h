@@ -40,7 +40,7 @@
 /**
  *  获取学校的详细信息
  */
-+ (NSURLSessionDataTask *) infoCollege:(NSString *)aCollege withBlock:(void (^)(id model, NSError *error))block;
++ (NSURLSessionDataTask *) infoCollege:(NSString *)aCollege withBlock:(void (^)(CollegeModel * collegeModel, NSError *error))block;
 
 
 @end

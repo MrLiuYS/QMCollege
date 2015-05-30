@@ -20,7 +20,9 @@
 @property (nonatomic, assign) BOOL is985;
 @property (nonatomic, copy) NSString * info211And985;//211院校：是 985院校：是
 
-@property (nonatomic, copy) NSString * info;
+@property (nonatomic, copy) NSString * intro;   //简介
+
+@property (nonatomic, copy) NSString * info;    //详情
 
 
 @end

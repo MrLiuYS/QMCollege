@@ -11,6 +11,8 @@
 		6C6877911B191B2F002481C0 /* CollegeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6877901B191B2F002481C0 /* CollegeModel.m */; };
 		FF6CC0261B1831CA00A24C81 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6CC0251B1831CA00A24C81 /* Service.m */; };
 		FF6CC02B1B18387F00A24C81 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6CC02A1B18387F00A24C81 /* Model.m */; };
+		FFAA6D7E1B19592C00DE3679 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA6D7D1B19592C00DE3679 /* TableViewController.swift */; };
+		FFAA6D801B1960CA00DE3679 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA6D7F1B1960CA00DE3679 /* DetailViewController.swift */; };
 		FFD900531B15A56000EE7B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD900521B15A56000EE7B59 /* AppDelegate.swift */; };
 		FFD900551B15A56000EE7B59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD900541B15A56000EE7B59 /* ViewController.swift */; };
 		FFD900581B15A56000EE7B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD900561B15A56000EE7B59 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		FF6CC0251B1831CA00A24C81 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		FF6CC0291B18387F00A24C81 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		FF6CC02A1B18387F00A24C81 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		FFAA6D7D1B19592C00DE3679 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FFAA6D7F1B1960CA00DE3679 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FFD9004D1B15A56000EE7B59 /* QMCollege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QMCollege.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD900511B15A56000EE7B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFD900521B15A56000EE7B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 			children = (
 				FFD900521B15A56000EE7B59 /* AppDelegate.swift */,
 				FFD900541B15A56000EE7B59 /* ViewController.swift */,
+				FFAA6D7F1B1960CA00DE3679 /* DetailViewController.swift */,
+				FFAA6D7D1B19592C00DE3679 /* TableViewController.swift */,
 				FF6CC0281B18385800A24C81 /* OCHelp */,
 				FFD900561B15A56000EE7B59 /* Main.storyboard */,
 				FFD900591B15A56000EE7B59 /* Images.xcassets */,
@@ -313,10 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C6877911B191B2F002481C0 /* CollegeModel.m in Sources */,
+				FFAA6D7E1B19592C00DE3679 /* TableViewController.swift in Sources */,
 				FFD900551B15A56000EE7B59 /* ViewController.swift in Sources */,
 				FFD900531B15A56000EE7B59 /* AppDelegate.swift in Sources */,
 				FF6CC0261B1831CA00A24C81 /* Service.m in Sources */,
 				FF6CC02B1B18387F00A24C81 /* Model.m in Sources */,
+				FFAA6D801B1960CA00DE3679 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
