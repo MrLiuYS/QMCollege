@@ -37,32 +37,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             SVProgressHUD.dismiss()
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        
-//        SVProgressHUD.showWithStatus("正在加载", maskType: SVProgressHUDMaskType.Black)
-//        
-//        Service.cityList { (array, error) -> Void in
-//
-//            self.leftArray = array as! Array<Model>
-//            
-//            self.leftTable.reloadData()
-//            SVProgressHUD.dismiss()
-//        }
-        
-        
-//        Service.collegeListFromCity("nba.asp?id=2", withBlock: { (array, error) -> Void in
-//            
-//            SVProgressHUD.dismiss()
-//            
-//        })
-        
-//        Service.infoCollege("wba.asp?id=1233", withBlock: { (model, error) -> Void in
-//            
-//            SVProgressHUD.dismiss()
-//        })
-        
-    }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
