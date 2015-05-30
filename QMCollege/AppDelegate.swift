@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         MobClick.startWithAppkey(kUMengKey, reportPolicy: BATCH, channelId: "ceshi")
         
-        
+        Service.createYoumiIAD()
         
         
         return true

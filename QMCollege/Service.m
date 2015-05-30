@@ -11,6 +11,25 @@
 
 @implementation Service
 
+
++ (void)createYoumiIAD {
+    
+    NSString *appid = @"51f0f224c37459c6";
+    NSString *secretId = @"014cb0f05770af7d";
+    [YouMiNewSpot initYouMiDeveloperParams:appid YM_SecretId:secretId];
+    
+    //使用前先初始化一下插屏
+    [YouMiNewSpot initYouMiDeveLoperSpot:kSPOTSpotTypeBoth];//填上你对应的横竖屏模式
+}
+
++ (void)showYoumiIAD {
+    
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:kIAPClear]) {
+        [YouMiNewSpot showYouMiSpotAction:^(BOOL flag){
+        }];
+    }
+}
+
 + (instancetype)sharedClient {
     static Service *_sharedClient = nil;
     static dispatch_once_t onceToken;

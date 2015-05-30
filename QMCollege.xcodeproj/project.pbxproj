@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		5608DC0A4FCE42B3A13F48E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D5EA93A325EE160EA6E2A0 /* libPods.a */; };
 		6C6877911B191B2F002481C0 /* CollegeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6877901B191B2F002481C0 /* CollegeModel.m */; };
+		6CFF29B61B19CF15005B1BC9 /* youmispot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29B51B19CF15005B1BC9 /* youmispot.a */; };
+		6CFF29B81B19CF50005B1BC9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29B71B19CF50005B1BC9 /* StoreKit.framework */; };
+		6CFF29BA1B19CF59005B1BC9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29B91B19CF59005B1BC9 /* Security.framework */; };
+		6CFF29BC1B19CF62005B1BC9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29BB1B19CF62005B1BC9 /* CFNetwork.framework */; };
+		6CFF29BE1B19CF6B005B1BC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29BD1B19CF6B005B1BC9 /* SystemConfiguration.framework */; };
+		6CFF29C01B19CF73005B1BC9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29BF1B19CF73005B1BC9 /* ImageIO.framework */; };
+		6CFF29C21B19CF7B005B1BC9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29C11B19CF7B005B1BC9 /* CoreMotion.framework */; };
+		6CFF29C41B19CF82005B1BC9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29C31B19CF82005B1BC9 /* libz.dylib */; };
+		6CFF29C61B19CF8B005B1BC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29C51B19CF8B005B1BC9 /* libsqlite3.dylib */; };
 		FF6CC0261B1831CA00A24C81 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6CC0251B1831CA00A24C81 /* Service.m */; };
 		FF6CC02B1B18387F00A24C81 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6CC02A1B18387F00A24C81 /* Model.m */; };
 		FFA443F41B1996C700A3E970 /* SetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA443F31B1996C700A3E970 /* SetTableViewController.swift */; };
@@ -37,6 +46,18 @@
 		3DEF2EE13DD08C879FCB8CE5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C68778F1B191B2F002481C0 /* CollegeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeModel.h; sourceTree = "<group>"; };
 		6C6877901B191B2F002481C0 /* CollegeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollegeModel.m; sourceTree = "<group>"; };
+		6CFF29B21B19CF15005B1BC9 /* ConfigHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHeader.h; sourceTree = "<group>"; };
+		6CFF29B31B19CF15005B1BC9 /* symbols_spotconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbols_spotconfuse.h; sourceTree = "<group>"; };
+		6CFF29B41B19CF15005B1BC9 /* YouMiNewSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiNewSpot.h; sourceTree = "<group>"; };
+		6CFF29B51B19CF15005B1BC9 /* youmispot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = youmispot.a; sourceTree = "<group>"; };
+		6CFF29B71B19CF50005B1BC9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6CFF29B91B19CF59005B1BC9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6CFF29BB1B19CF62005B1BC9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6CFF29BD1B19CF6B005B1BC9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6CFF29BF1B19CF73005B1BC9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6CFF29C11B19CF7B005B1BC9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6CFF29C31B19CF82005B1BC9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6CFF29C51B19CF8B005B1BC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F8D5EA93A325EE160EA6E2A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6CC0241B1831CA00A24C81 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		FF6CC0251B1831CA00A24C81 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
@@ -63,7 +84,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFF29C61B19CF8B005B1BC9 /* libsqlite3.dylib in Frameworks */,
+				6CFF29C41B19CF82005B1BC9 /* libz.dylib in Frameworks */,
+				6CFF29C21B19CF7B005B1BC9 /* CoreMotion.framework in Frameworks */,
+				6CFF29C01B19CF73005B1BC9 /* ImageIO.framework in Frameworks */,
+				6CFF29BE1B19CF6B005B1BC9 /* SystemConfiguration.framework in Frameworks */,
+				6CFF29BC1B19CF62005B1BC9 /* CFNetwork.framework in Frameworks */,
+				6CFF29BA1B19CF59005B1BC9 /* Security.framework in Frameworks */,
+				6CFF29B81B19CF50005B1BC9 /* StoreKit.framework in Frameworks */,
 				5608DC0A4FCE42B3A13F48E5 /* libPods.a in Frameworks */,
+				6CFF29B61B19CF15005B1BC9 /* youmispot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +110,36 @@
 		27C2BEE4576977D05689C4CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CFF29C51B19CF8B005B1BC9 /* libsqlite3.dylib */,
+				6CFF29C31B19CF82005B1BC9 /* libz.dylib */,
+				6CFF29C11B19CF7B005B1BC9 /* CoreMotion.framework */,
+				6CFF29BF1B19CF73005B1BC9 /* ImageIO.framework */,
+				6CFF29BD1B19CF6B005B1BC9 /* SystemConfiguration.framework */,
+				6CFF29BB1B19CF62005B1BC9 /* CFNetwork.framework */,
+				6CFF29B91B19CF59005B1BC9 /* Security.framework */,
+				6CFF29B71B19CF50005B1BC9 /* StoreKit.framework */,
 				F8D5EA93A325EE160EA6E2A0 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CFF29B01B19CF15005B1BC9 /* spotlib */ = {
+			isa = PBXGroup;
+			children = (
+				6CFF29B11B19CF15005B1BC9 /* include */,
+				6CFF29B51B19CF15005B1BC9 /* youmispot.a */,
+			);
+			path = spotlib;
+			sourceTree = "<group>";
+		};
+		6CFF29B11B19CF15005B1BC9 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6CFF29B21B19CF15005B1BC9 /* ConfigHeader.h */,
+				6CFF29B31B19CF15005B1BC9 /* symbols_spotconfuse.h */,
+				6CFF29B41B19CF15005B1BC9 /* YouMiNewSpot.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		9D71BE9F904CB9E34231D126 /* Pods */ = {
@@ -108,6 +165,7 @@
 		FF6CC0281B18385800A24C81 /* OCHelp */ = {
 			isa = PBXGroup;
 			children = (
+				6CFF29B01B19CF15005B1BC9 /* spotlib */,
 				FF6CC0271B18383D00A24C81 /* Model */,
 				FFD900781B15A75100EE7B59 /* Service */,
 			);
@@ -463,6 +521,10 @@
 				INFOPLIST_FILE = QMCollege/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QMCollege/spotlib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QMCollege/QMCollege-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -479,6 +541,10 @@
 				INFOPLIST_FILE = QMCollege/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QMCollege/spotlib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QMCollege/QMCollege-Bridging-Header.h";
 			};

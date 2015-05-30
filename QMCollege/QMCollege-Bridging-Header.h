@@ -12,6 +12,7 @@
 #import <SimplePurchase.h>
 #import "Service.h"
 #import <UIImageView+WebCache.h>
+#import "ConfigHeader.h"
 
 #define kBaseURLString @"http://college.m.supfree.net/"
 

@@ -14,6 +14,9 @@
 
 @interface Service : AFHTTPSessionManager
 
++ (void)createYoumiIAD;
++ (void)showYoumiIAD;
+
 + (instancetype)sharedClient;
 
 /**

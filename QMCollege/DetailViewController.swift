@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
 
         SVProgressHUD.showWithStatus("正在加载", maskType: SVProgressHUDMaskType.Black)
         
@@ -37,7 +38,9 @@ class DetailViewController: UIViewController {
             SVProgressHUD.dismiss()
             
         })
-
+        
+        
+        Service.showYoumiIAD()
         
     }
 
