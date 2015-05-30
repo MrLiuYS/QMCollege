@@ -16,21 +16,26 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var introLabel: UILabel!
     
+    @IBOutlet weak var infoText: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         SVProgressHUD.showWithStatus("正在加载", maskType: SVProgressHUDMaskType.Black)
         
         Service.infoCollege(self.model?.infoUrlString, withBlock: { (collegeModel, error) -> Void in
             
-
             self.introLabel.text = collegeModel.intro;
+            
+            self.infoText.text = collegeModel.info;
             
             self.logoImageView.sd_setImageWithURL(NSURL(string: collegeModel.logo), placeholderImage: nil)
             
             SVProgressHUD.dismiss()
+            
         })
 
         

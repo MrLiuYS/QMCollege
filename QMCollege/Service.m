@@ -224,7 +224,7 @@
                                 GDataXMLElement * el = p[0];
                                 m.intro = el.stringValue;
                             }else {
-                                
+                                m.info = @"";
                                 for (GDataXMLElement *el in p) {
                                     m.info = [m.info stringByAppendingFormat:@"%@\n",el.stringValue];
                                 }
@@ -237,7 +237,6 @@
     }
     return m;
 }
-
 
 
 
