@@ -102,12 +102,6 @@
 #define COCOAPODS_VERSION_MINOR_SimplePurchase 0
 #define COCOAPODS_VERSION_PATCH_SimplePurchase 1
 
-// UMengAnalytics
-#define COCOAPODS_POD_AVAILABLE_UMengAnalytics
-#define COCOAPODS_VERSION_MAJOR_UMengAnalytics 3
-#define COCOAPODS_VERSION_MINOR_UMengAnalytics 5
-#define COCOAPODS_VERSION_PATCH_UMengAnalytics 8
-
 // UMengSocial
 #define COCOAPODS_POD_AVAILABLE_UMengSocial
 #define COCOAPODS_VERSION_MAJOR_UMengSocial 4

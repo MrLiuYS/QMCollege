@@ -26,7 +26,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.leftTable.tableFooterView = UIView()
         self.rightTable.tableFooterView = UIView()
         
-        
         SVProgressHUD.showWithStatus("正在加载", maskType: SVProgressHUDMaskType.Black)
         
         Service.cityList { (array, error) -> Void in
@@ -34,6 +33,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             self.leftArray = array as! Array<Model>
             
             self.leftTable.reloadData()
+            
             SVProgressHUD.dismiss()
         }
     }

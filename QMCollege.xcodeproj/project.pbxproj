@@ -522,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: yongsheng liu (K6D5KQ7QKW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Wei (4X728K54LX)";
 				INFOPLIST_FILE = QMCollege/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -531,7 +531,7 @@
 					"$(PROJECT_DIR)/QMCollege/spotlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5f3be61d-1af4-421b-8253-43af667b6fc2";
+				PROVISIONING_PROFILE = "63778686-107b-4e86-9b80-8ad7d1e15d93";
 				SWIFT_OBJC_BRIDGING_HEADER = "QMCollege/QMCollege-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -544,7 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: yongsheng liu (K6D5KQ7QKW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Wei (4X728K54LX)";
 				INFOPLIST_FILE = QMCollege/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -553,7 +553,7 @@
 					"$(PROJECT_DIR)/QMCollege/spotlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5f3be61d-1af4-421b-8253-43af667b6fc2";
+				PROVISIONING_PROFILE = "63778686-107b-4e86-9b80-8ad7d1e15d93";
 				SWIFT_OBJC_BRIDGING_HEADER = "QMCollege/QMCollege-Bridging-Header.h";
 			};
 			name = Release;
