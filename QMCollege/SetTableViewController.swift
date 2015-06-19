@@ -14,12 +14,6 @@ class SetTableViewController: UITableViewController,UMSocialUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var temp: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(kIAPClear)
-        
-        if let bo: AnyObject = temp {
-            self.clearIADLabel.text = "恢复购买"
-        }
         
     }
 
@@ -57,8 +51,6 @@ class SetTableViewController: UITableViewController,UMSocialUIDelegate {
                     NSUserDefaults.standardUserDefaults().setBool(true, forKey: kIAPClear)
                     NSUserDefaults.standardUserDefaults().synchronize()
                     
-                    self.clearIADLabel.text = "回复购买"
-                    
                 }else {
                     
                     let alert = UIAlertView(title: "购买失败",
@@ -75,6 +67,46 @@ class SetTableViewController: UITableViewController,UMSocialUIDelegate {
     }
     
     
+    @IBAction func touchRestore(sender: AnyObject) {
+        
+        var temp: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(kIAPClear)
+        
+        if let bo: AnyObject = temp {
+            SVProgressHUD.showWithStatus("努力加载", maskType: SVProgressHUDMaskType.Black)
+            
+            SimplePurchase.buyProduct(kIAPClear, block: { (error) -> Void in
+                
+                SVProgressHUD.dismiss()
+                
+                if error == nil {
+                    
+                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: kIAPClear)
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                    
+                }else {
+                    
+                    let alert = UIAlertView(title: "购买失败",
+                        message: error.localizedDescription,
+                        delegate: nil,
+                        cancelButtonTitle: "取消")
+                    
+                    alert.show()
+                }
+                
+            })
+            
+        }else {
+            let alert = UIAlertView(title: "提示",
+                message: "没有购买记录",
+                delegate: nil,
+                cancelButtonTitle: "取消")
+            
+            alert.show()
+            
+        }
+        
+        
+    }
     
     
     // MARK: - Table view data source
