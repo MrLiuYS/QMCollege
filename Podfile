@@ -8,3 +8,5 @@ pod 'SVProgressHUD', '~> 1.1.3'
 pod 'UMengSocial', '~> 4.2.2'
 pod 'SDWebImage', '~> 3.7.2'
 pod 'SimplePurchase', '~> 0.0.1'
+
+pod 'Google-Mobile-Ads-SDK', '~> 7.7.1'

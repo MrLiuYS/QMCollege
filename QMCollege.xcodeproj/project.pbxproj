@@ -290,6 +290,7 @@
 		FFD900451B15A56000EE7B59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = QiMENG;
 				TargetAttributes = {
