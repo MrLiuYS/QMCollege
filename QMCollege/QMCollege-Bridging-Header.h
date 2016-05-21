@@ -5,7 +5,7 @@
 #import <GDataXMLNode.h>
 #import <CocoaLumberjack.h>
 #import <SVProgressHUD.h>
-//#import <MobClick.h>
+#import <MobClick.h>
 #import <UMSocial.h>
 #import <AFNetworking.h>
 

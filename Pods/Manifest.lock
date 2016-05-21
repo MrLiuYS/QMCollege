@@ -35,6 +35,7 @@ PODS:
   - SDWebImage/Core (3.7.2)
   - SimplePurchase (0.0.1)
   - SVProgressHUD (1.1.3)
+  - UMengAnalytics (3.6.6)
   - UMengSocial (4.2.3)
 
 DEPENDENCIES:
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.7.2)
   - SimplePurchase (~> 0.0.1)
   - SVProgressHUD (~> 1.1.3)
+  - UMengAnalytics (~> 3.6.6)
   - UMengSocial (~> 4.2.2)
 
 SPEC CHECKSUMS:
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SimplePurchase: 5ed9b5fe46ee946636298257d24ba2990c427a21
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  UMengAnalytics: 4bf831415146b9c57cb10be65fbd43462ef8cf65
   UMengSocial: 85882abe5b20aa38ad558ece71360e16b5d50909
 
 COCOAPODS: 0.39.0
