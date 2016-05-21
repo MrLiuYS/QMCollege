@@ -1,1 +1,0 @@
-PODS_SIMPLEPURCHASE_OTHER_LDFLAGS = -framework "StoreKit"
