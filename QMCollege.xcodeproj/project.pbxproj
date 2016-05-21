@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D46CE321CF054F6001EC351 /* QMAdSupper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D46CE311CF054F6001EC351 /* QMAdSupper.m */; };
+		0D46CE341CF0721B001EC351 /* Default-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D46CE331CF0721B001EC351 /* Default-568.png */; };
 		5608DC0A4FCE42B3A13F48E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D5EA93A325EE160EA6E2A0 /* libPods.a */; };
 		6C6877911B191B2F002481C0 /* CollegeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6877901B191B2F002481C0 /* CollegeModel.m */; };
 		6CFF29B61B19CF15005B1BC9 /* youmispot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFF29B51B19CF15005B1BC9 /* youmispot.a */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0D46CE301CF054F6001EC351 /* QMAdSupper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMAdSupper.h; sourceTree = "<group>"; };
 		0D46CE311CF054F6001EC351 /* QMAdSupper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMAdSupper.m; sourceTree = "<group>"; };
+		0D46CE331CF0721B001EC351 /* Default-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568.png"; sourceTree = "<group>"; };
 		2D1FA29F07159FDF667E514A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3DEF2EE13DD08C879FCB8CE5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C68778F1B191B2F002481C0 /* CollegeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollegeModel.h; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		FFD9004F1B15A56000EE7B59 /* QMCollege */ = {
 			isa = PBXGroup;
 			children = (
+				0D46CE331CF0721B001EC351 /* Default-568.png */,
 				FFD900521B15A56000EE7B59 /* AppDelegate.swift */,
 				FFD900541B15A56000EE7B59 /* ViewController.swift */,
 				FFAA6D7F1B1960CA00DE3679 /* DetailViewController.swift */,
@@ -337,6 +340,7 @@
 				FFD900581B15A56000EE7B59 /* Main.storyboard in Resources */,
 				FFD9005D1B15A56000EE7B59 /* LaunchScreen.xib in Resources */,
 				FFD9005A1B15A56000EE7B59 /* Images.xcassets in Resources */,
+				0D46CE341CF0721B001EC351 /* Default-568.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
