@@ -1,6 +1,6 @@
 platform :ios, "7.0"
 
-pod 'AFNetworking', '~> 2.5.4'
+pod 'AFNetworking', '2.5.4'
 pod 'GDataXML-HTML', '~> 1.2.0'
 pod 'CocoaLumberjack', '~> 2.0.0'
 pod 'SVProgressHUD', '~> 1.1.3'

@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
+    
+    @IBOutlet weak var footerView: UIView!
     
     @IBOutlet weak var leftTable: UITableView!
     
@@ -36,8 +37,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             
             SVProgressHUD.dismiss()
         }
+        
+        QMAdSupper.shareInstance().showBannerInView(self.footerView, viewController: self)
+        
     }
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -57,7 +61,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             
             let m:Model = self.leftArray[indexPath.row]
             
-//            cell.textLabel?.highlightedTextColor = UIColor.whiteColor()
+            //            cell.textLabel?.highlightedTextColor = UIColor.whiteColor()
             cell.textLabel?.text = m.title
             
             
@@ -87,7 +91,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 self.rightArray = array as! Array<Model>
                 
                 self.rightTable.reloadData()
-
+                
                 if self.rightArray.count > 0 {
                     
                     self.rightTable.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
@@ -97,7 +101,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 SVProgressHUD.dismiss()
                 
             })
-
+            
+            
+            QMAdSupper.shareInstance().showTableScreenInViewController(self)
             
         }else {
             
@@ -128,7 +134,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

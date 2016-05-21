@@ -35,7 +35,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedClient = [[Service alloc] initWithBaseURL:[NSURL URLWithString:kBaseURLString]];
-
+        
         _sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
         
         [_sharedClient.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
@@ -115,7 +115,7 @@
                     for (GDataXMLElement * item in agroups) {
                         
                         Model * m = [[Model alloc]initWithTitle:item.stringValue
-                                                 infoUrlString:[[item attributeForName:@"href"] stringValue]];
+                                                  infoUrlString:[[item attributeForName:@"href"] stringValue]];
                         
                         [mainArray addObject:m];
                         
@@ -146,7 +146,7 @@
     NSMutableArray * mainArray = [NSMutableArray array];
     
     @autoreleasepool {
-     
+        
         GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithHTMLData:response
                                                                   encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
                                                                      error:NULL];
@@ -166,7 +166,7 @@
                         Model * m = [[Model alloc]initWithTitle:element.stringValue
                                                   infoUrlString:[[element attributeForName:@"href"] stringValue]];
                         [mainArray addObject:m];
-
+                        
                     }   
                 }
             }
@@ -195,14 +195,14 @@
     CollegeModel * m = [CollegeModel new];
     
     @autoreleasepool {
-     
+        
         GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithHTMLData:response
                                                                   encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
                                                                      error:NULL];
         
         if (doc) {
             NSArray *list = [doc nodesForXPath:@"//table" error:NULL];
-
+            
             for (GDataXMLElement * item in list) {
                 
                 NSArray * trList = [item elementsForName:@"tr"];
